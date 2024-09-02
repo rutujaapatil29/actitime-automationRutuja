@@ -1,0 +1,21 @@
+<suite name="actitime-automation" verbose="1" >
+    <test name="Regression1" >
+        <classes>
+            <class name="com.actitimeautomation.sample.TestNGAnnotations"/>
+        </classes>
+    </test>
+
+    <test name="Regression3">
+        <classes>
+        <class name="com.actitimeautomation.sample.WindowsOperationsTest"/>
+        </classes>
+    </test>
+
+    <test name ="Sanity">
+        <classes>
+            <methods>
+                <exclude name="test2"/>
+            </methods>
+        </classes>
+    </test>
+</suite>
