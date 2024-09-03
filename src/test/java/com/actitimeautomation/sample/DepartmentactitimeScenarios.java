@@ -19,12 +19,15 @@ public DepartmentactitimeScenarios()//nonsatic method
     driver = super.driver;
     commonUtil=new CommonUtil(driver);
 
+
+
 }
 
 public static void main(String[] argh) throws Exception {
-    Actions actions=new Actions(driver);
+
     DepartmentactitimeScenarios department = new DepartmentactitimeScenarios();
     driver.manage().window().maximize();
+    Actions actions=new Actions(driver);
     //navigate to wesite
     driver.get("https://online.actitime.com/premia2/");
     //Create object of login page class
@@ -56,17 +59,17 @@ public static void main(String[] argh) throws Exception {
     driver.findElement(By.xpath("(//input[@class='firstNameField inputFieldWithPlaceholder' and @name='firstName'])[2]")).sendKeys("jhon");
    // Thread.sleep(5000);
     //Enetr Middle name
-    driver.findElement(By.xpath("//input[@id='createUserPanel_middleNameField']")).sendKeys("M1");
+    driver.findElement(By.xpath("//input[@id='createUserPanel_middleNameField']")).sendKeys("M2");
     //Click and enettr last name
-    driver.findElement(By.xpath("//input[@id='createUserPanel_lastNameField']")).sendKeys("Senha1");
+    driver.findElement(By.xpath("//input[@id='createUserPanel_lastNameField']")).sendKeys("Senha2");
     Thread.sleep(5000);
     //Click andEnetr email id
-    driver.findElement(By.xpath("//input[@id='createUserPanel_emailField']")).sendKeys("johnSenha1@gmail.com");
+    driver.findElement(By.xpath("//input[@id='createUserPanel_emailField']")).sendKeys("johnSenha2@gmail.com");
     Thread.sleep(5000);
     //slect department
 
     driver.findElement(By.xpath("//div[@class='simpleListMenuButton components_userGroupSelectorMenu emptyList notEmpty']")).click();
-    driver.findElement(By.xpath("//div[text()='Research']")).click();
+    driver.findElement(By.xpath("//div[text()='Development']")).click();
     // driver.findElement(By.xpath("//div[@class='simpleListMenuButton components_userGroupSelectorMenu emptyList notEmpty']")).sendKeys("Development");
     // driver.findElement(By.xpath("//div[@class='dropdownContainer simpleListMenu ']")).sendKeys("Development");
     Thread.sleep(5000);
@@ -80,7 +83,7 @@ public static void main(String[] argh) throws Exception {
                     .perform();
     Thread.sleep(5000);
     //driver.findElement(By.xpath("(//span[text()='Remote Work'])[1]")).click();
-    Thread.sleep(5000);
+
     //save and sendInvitatf4"ion
     driver.findElement(By.xpath("//div[text()='Save & Send Invitation']")).click();
     Thread.sleep(5000);
